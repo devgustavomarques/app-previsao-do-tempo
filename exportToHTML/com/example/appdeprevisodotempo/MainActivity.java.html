@@ -1,0 +1,232 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">appdeprevisodotempo</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">EdgeToEdge</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">appcompat</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">graphics</span><span class="s2">.</span><span class="s1">Insets</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewCompat</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">WindowInsetsCompat</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s2">{</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">Bundle savedInstanceState</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">);</span>
+        <span class="s1">EdgeToEdge</span><span class="s2">.</span><span class="s1">enable</span><span class="s2">(</span><span class="s0">this</span><span class="s2">);</span>
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s2">);</span>
+        <span class="s1">ViewCompat</span><span class="s2">.</span><span class="s1">setOnApplyWindowInsetsListener</span><span class="s2">(</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">main</span><span class="s2">), (</span><span class="s1">v</span><span class="s2">, </span><span class="s1">insets</span><span class="s2">) </span><span class="s1">-&gt; </span><span class="s2">{</span>
+            <span class="s1">Insets systemBars </span><span class="s2">= </span><span class="s1">insets</span><span class="s2">.</span><span class="s1">getInsets</span><span class="s2">(</span><span class="s1">WindowInsetsCompat</span><span class="s2">.</span><span class="s1">Type</span><span class="s2">.</span><span class="s1">systemBars</span><span class="s2">());</span>
+            <span class="s1">v</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">left</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">top</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">right</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">bottom</span><span class="s2">);</span>
+            <span class="s0">return </span><span class="s1">insets</span><span class="s2">;</span>
+        <span class="s2">});</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">// ADICIONANDO DEPENDÊNCIAS</span>
+
+<span class="s1">dependencies </span><span class="s2">{</span>
+    <span class="s1">implementation </span><span class="s4">'com.google.android.material:material:1.4.0'</span>
+    <span class="s1">implementation </span><span class="s4">'androidx.recyclerview:recyclerview:1.2.1'</span>
+    <span class="s1">implementation </span><span class="s4">'androidx.cardview:cardview:1.0.0'</span>
+    <span class="s1">implementation </span><span class="s4">'com.google.code.gson:gson:2.8.7'</span>
+    <span class="s1">implementation </span><span class="s4">'com.squareup.retrofit2:retrofit:2.9.0'</span>
+    <span class="s1">implementation </span><span class="s4">'com.squareup.retrofit2:converter-gson:2.9.0'</span>
+    <span class="s1">implementation </span><span class="s4">'com.google.android.gms:play-services-maps:17.0.0'</span>
+    <span class="s1">implementation </span><span class="s4">'com.journeyapps:zxing-android-embedded:4.3.0'</span>
+<span class="s2">}</span>
+
+<span class="s3">// SPLASH SCREEN</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">content</span><span class="s2">.</span><span class="s1">Intent</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Handler</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">appcompat</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">SplashActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s2">{</span>
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">Bundle savedInstanceState</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">);</span>
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_splash</span><span class="s2">);</span>
+
+        <span class="s0">new </span><span class="s1">Handler</span><span class="s2">().</span><span class="s1">postDelayed</span><span class="s2">(() </span><span class="s1">-&gt; </span><span class="s2">{</span>
+            <span class="s1">Intent intent </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Intent</span><span class="s2">(</span><span class="s1">SplashActivity</span><span class="s2">.</span><span class="s0">this</span><span class="s2">, </span><span class="s1">MainActivity</span><span class="s2">.</span><span class="s0">class</span><span class="s2">);</span>
+            <span class="s1">startActivity</span><span class="s2">(</span><span class="s1">intent</span><span class="s2">);</span>
+            <span class="s1">finish</span><span class="s2">();</span>
+        <span class="s2">}, </span><span class="s5">3000</span><span class="s2">); </span><span class="s3">// 3 segundos de delay</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">// ADAPTER PARA GERENCIAR FRAGMENTOS</span>
+
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">NonNull</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">fragment</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">Fragment</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">fragment</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">FragmentActivity</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">viewpager2</span><span class="s2">.</span><span class="s1">adapter</span><span class="s2">.</span><span class="s1">FragmentStateAdapter</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">TabAdapter </span><span class="s0">extends </span><span class="s1">FragmentStateAdapter </span><span class="s2">{</span>
+    <span class="s0">public </span><span class="s1">TabAdapter</span><span class="s2">(</span><span class="s1">@NonNull FragmentActivity fragmentActivity</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">(</span><span class="s1">fragmentActivity</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@NonNull</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">Fragment createFragment</span><span class="s2">(</span><span class="s0">int </span><span class="s1">position</span><span class="s2">) {</span>
+        <span class="s0">return </span><span class="s1">position </span><span class="s2">== </span><span class="s5">0 </span><span class="s2">? </span><span class="s0">new </span><span class="s1">ForecastFragment</span><span class="s2">() : </span><span class="s0">new </span><span class="s1">MapFragment</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">getItemCount</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s5">2</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">// ABA DE PREVISAO E MAPA</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">fragment</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">Fragment</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">recyclerview</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">LinearLayoutManager</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">recyclerview</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">RecyclerView</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">LayoutInflater</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">View</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewGroup</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">ForecastFragment </span><span class="s0">extends </span><span class="s1">Fragment </span><span class="s2">{</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">View onCreateView</span><span class="s2">(</span><span class="s1">LayoutInflater inflater</span><span class="s2">, </span><span class="s1">ViewGroup container</span><span class="s2">, </span><span class="s1">Bundle savedInstanceState</span><span class="s2">) {</span>
+        <span class="s1">View view </span><span class="s2">= </span><span class="s1">inflater</span><span class="s2">.</span><span class="s1">inflate</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">fragment_forecast</span><span class="s2">, </span><span class="s1">container</span><span class="s2">, </span><span class="s0">false</span><span class="s2">);</span>
+        <span class="s1">RecyclerView recyclerView </span><span class="s2">= </span><span class="s1">view</span><span class="s2">.</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">recyclerView</span><span class="s2">);</span>
+        <span class="s1">recyclerView</span><span class="s2">.</span><span class="s1">setLayoutManager</span><span class="s2">(</span><span class="s0">new </span><span class="s1">LinearLayoutManager</span><span class="s2">(</span><span class="s1">getContext</span><span class="s2">()));</span>
+
+        <span class="s3">// Configurar o adapter da RecyclerView</span>
+        <span class="s1">recyclerView</span><span class="s2">.</span><span class="s1">setAdapter</span><span class="s2">(</span><span class="s0">new </span><span class="s1">WeatherAdapter</span><span class="s2">(</span><span class="s3">/* dados da API */</span><span class="s2">));</span>
+        <span class="s0">return </span><span class="s1">view</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">// RecyclerView para previsão do tempo</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">LayoutInflater</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">View</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewGroup</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">TextView</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">NonNull</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">recyclerview</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">RecyclerView</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">List</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">WeatherAdapter </span><span class="s0">extends </span><span class="s1">RecyclerView</span><span class="s2">.</span><span class="s1">Adapter</span><span class="s2">&lt;</span><span class="s1">WeatherAdapter</span><span class="s2">.</span><span class="s1">WeatherViewHolder</span><span class="s2">&gt; {</span>
+
+    <span class="s0">private final </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">WeatherResponse</span><span class="s2">.</span><span class="s1">WeatherData</span><span class="s2">.</span><span class="s1">Forecast</span><span class="s2">&gt; </span><span class="s1">forecastList</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">WeatherAdapter</span><span class="s2">(</span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">WeatherResponse</span><span class="s2">.</span><span class="s1">WeatherData</span><span class="s2">.</span><span class="s1">Forecast</span><span class="s2">&gt; </span><span class="s1">forecastList</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">forecastList </span><span class="s2">= </span><span class="s1">forecastList</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@NonNull</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">WeatherViewHolder onCreateViewHolder</span><span class="s2">(</span><span class="s1">@NonNull ViewGroup parent</span><span class="s2">, </span><span class="s0">int </span><span class="s1">viewType</span><span class="s2">) {</span>
+        <span class="s1">View view </span><span class="s2">= </span><span class="s1">LayoutInflater</span><span class="s2">.</span><span class="s1">from</span><span class="s2">(</span><span class="s1">parent</span><span class="s2">.</span><span class="s1">getContext</span><span class="s2">()).</span><span class="s1">inflate</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">item_forecast</span><span class="s2">, </span><span class="s1">parent</span><span class="s2">, </span><span class="s0">false</span><span class="s2">);</span>
+        <span class="s0">return new </span><span class="s1">WeatherViewHolder</span><span class="s2">(</span><span class="s1">view</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">onBindViewHolder</span><span class="s2">(</span><span class="s1">@NonNull WeatherViewHolder holder</span><span class="s2">, </span><span class="s0">int </span><span class="s1">position</span><span class="s2">) {</span>
+        <span class="s1">WeatherResponse</span><span class="s2">.</span><span class="s1">WeatherData</span><span class="s2">.</span><span class="s1">Forecast forecast </span><span class="s2">= </span><span class="s1">forecastList</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s1">position</span><span class="s2">);</span>
+        <span class="s1">holder</span><span class="s2">.</span><span class="s1">dateTextView</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s1">forecast</span><span class="s2">.</span><span class="s1">date</span><span class="s2">);</span>
+        <span class="s1">holder</span><span class="s2">.</span><span class="s1">weekdayTextView</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s1">forecast</span><span class="s2">.</span><span class="s1">weekday</span><span class="s2">);</span>
+        <span class="s1">holder</span><span class="s2">.</span><span class="s1">tempTextView</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s1">String</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s4">&quot;Máx: %d°C - Mín: %d°C&quot;</span><span class="s2">, </span><span class="s1">forecast</span><span class="s2">.</span><span class="s1">max</span><span class="s2">, </span><span class="s1">forecast</span><span class="s2">.</span><span class="s1">min</span><span class="s2">));</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">getItemCount</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">forecastList</span><span class="s2">.</span><span class="s1">size</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">static class </span><span class="s1">WeatherViewHolder </span><span class="s0">extends </span><span class="s1">RecyclerView</span><span class="s2">.</span><span class="s1">ViewHolder </span><span class="s2">{</span>
+        <span class="s1">TextView dateTextView</span><span class="s2">;</span>
+        <span class="s1">TextView weekdayTextView</span><span class="s2">;</span>
+        <span class="s1">TextView tempTextView</span><span class="s2">;</span>
+
+        <span class="s1">WeatherViewHolder</span><span class="s2">(</span><span class="s1">@NonNull View itemView</span><span class="s2">) {</span>
+            <span class="s0">super</span><span class="s2">(</span><span class="s1">itemView</span><span class="s2">);</span>
+            <span class="s1">dateTextView </span><span class="s2">= </span><span class="s1">itemView</span><span class="s2">.</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">dateTextView</span><span class="s2">);</span>
+            <span class="s1">weekdayTextView </span><span class="s2">= </span><span class="s1">itemView</span><span class="s2">.</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">weekdayTextView</span><span class="s2">);</span>
+            <span class="s1">tempTextView </span><span class="s2">= </span><span class="s1">itemView</span><span class="s2">.</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">tempTextView</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">// MapFragment com GoogleMaps e marcador fixo</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">NonNull</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">fragment</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">Fragment</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">maps</span><span class="s2">.</span><span class="s1">CameraUpdateFactory</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">maps</span><span class="s2">.</span><span class="s1">GoogleMap</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">maps</span><span class="s2">.</span><span class="s1">OnMapReadyCallback</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">maps</span><span class="s2">.</span><span class="s1">SupportMapFragment</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">maps</span><span class="s2">.</span><span class="s1">model</span><span class="s2">.</span><span class="s1">LatLng</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">maps</span><span class="s2">.</span><span class="s1">model</span><span class="s2">.</span><span class="s1">MarkerOptions</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">MapFragment </span><span class="s0">extends </span><span class="s1">Fragment </span><span class="s0">implements </span><span class="s1">OnMapReadyCallback </span><span class="s2">{</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">View onCreateView</span><span class="s2">(</span><span class="s1">@NonNull LayoutInflater inflater</span><span class="s2">, </span><span class="s1">ViewGroup container</span><span class="s2">, </span><span class="s1">Bundle savedInstanceState</span><span class="s2">) {</span>
+        <span class="s1">View view </span><span class="s2">= </span><span class="s1">inflater</span><span class="s2">.</span><span class="s1">inflate</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">fragment_map</span><span class="s2">, </span><span class="s1">container</span><span class="s2">, </span><span class="s0">false</span><span class="s2">);</span>
+
+        <span class="s1">SupportMapFragment mapFragment </span><span class="s2">= (</span><span class="s1">SupportMapFragment</span><span class="s2">) </span><span class="s1">getChildFragmentManager</span><span class="s2">()</span>
+                <span class="s2">.</span><span class="s1">findFragmentById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">map</span><span class="s2">);</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">mapFragment </span><span class="s2">!= </span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s1">mapFragment</span><span class="s2">.</span><span class="s1">getMapAsync</span><span class="s2">(</span><span class="s0">this</span><span class="s2">);</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">view</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">onMapReady</span><span class="s2">(</span><span class="s1">@NonNull GoogleMap googleMap</span><span class="s2">) {</span>
+        <span class="s1">LatLng cityLocation </span><span class="s2">= </span><span class="s0">new </span><span class="s1">LatLng</span><span class="s2">(-</span><span class="s5">23.5505</span><span class="s2">, -</span><span class="s5">46.6333</span><span class="s2">); </span><span class="s3">// Substitua pelas coordenadas da cidade</span>
+        <span class="s1">googleMap</span><span class="s2">.</span><span class="s1">addMarker</span><span class="s2">(</span><span class="s0">new </span><span class="s1">MarkerOptions</span><span class="s2">().</span><span class="s1">position</span><span class="s2">(</span><span class="s1">cityLocation</span><span class="s2">).</span><span class="s1">title</span><span class="s2">(</span><span class="s4">&quot;Cidade&quot;</span><span class="s2">));</span>
+        <span class="s1">googleMap</span><span class="s2">.</span><span class="s1">moveCamera</span><span class="s2">(</span><span class="s1">CameraUpdateFactory</span><span class="s2">.</span><span class="s1">newLatLngZoom</span><span class="s2">(</span><span class="s1">cityLocation</span><span class="s2">, </span><span class="s5">10</span><span class="s2">));</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">// QR Code com ZXing para troca de cidade</span>
+
+<span class="s1">FloatingActionButton qrButton </span><span class="s2">= </span><span class="s1">view</span><span class="s2">.</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">qrButton</span><span class="s2">);</span>
+<span class="s1">qrButton</span><span class="s2">.</span><span class="s1">setOnClickListener</span><span class="s2">(</span><span class="s1">v -&gt; </span><span class="s2">{</span>
+<span class="s1">IntentIntegrator integrator </span><span class="s2">= </span><span class="s0">new </span><span class="s1">IntentIntegrator</span><span class="s2">(</span><span class="s1">getActivity</span><span class="s2">());</span>
+    <span class="s1">integrator</span><span class="s2">.</span><span class="s1">setDesiredBarcodeFormats</span><span class="s2">(</span><span class="s1">IntentIntegrator</span><span class="s2">.</span><span class="s1">QR_CODE</span><span class="s2">);</span>
+    <span class="s1">integrator</span><span class="s2">.</span><span class="s1">setPrompt</span><span class="s2">(</span><span class="s4">&quot;Escaneie o QR Code para alterar a cidade&quot;</span><span class="s2">);</span>
+    <span class="s1">integrator</span><span class="s2">.</span><span class="s1">setCameraId</span><span class="s2">(</span><span class="s5">0</span><span class="s2">);</span>
+    <span class="s1">integrator</span><span class="s2">.</span><span class="s1">setBeepEnabled</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+    <span class="s1">integrator</span><span class="s2">.</span><span class="s1">setBarcodeImageEnabled</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+    <span class="s1">integrator</span><span class="s2">.</span><span class="s1">initiateScan</span><span class="s2">();</span>
+<span class="s2">});</span>
+
+
+
+
+
+</pre>
+</body>
+</html>
